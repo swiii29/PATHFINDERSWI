@@ -1,0 +1,63 @@
+body {
+  text-align: center;
+  background: #f5f1e8;
+  color: #2c2c2c;
+  font-family: 'Inter', sans-serif;
+}
+
+#canvasContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+canvas {
+  border: 2px solid #c2b8a3;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background: transparent;
+  border: 1px solid #3a2f2f;
+  color: #3a2f2f;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3a2f2f;
+  color: #f5f1e8;
+}
+
+/* Dropdown */
+select {
+  padding: 8px;
+  border: 1px solid #3a2f2f;
+  background: #fdfaf3;
+}
+
+/* Panel */
+#rulesBox {
+  background: #fdfaf3;
+  border: 1px solid #d6cfc2;
+  box-shadow: 4px 4px 0px #c2b8a3;
+  padding: 15px;
+  margin: 20px auto;
+  width: 320px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+/* Title */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-top: 20px;
+}
+
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #7a6f6f;
+}

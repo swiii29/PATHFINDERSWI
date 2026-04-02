@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeoCity Generator</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- p5.js -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+</head>
+
+<body>
+
+<h1 class="title">Wave Function Collapse × A* Pathfinder</h1>
+<p class="subtitle">Procedural City Simulation Engine</p>
+
+<!-- ✅ CANVAS CONTAINER -->
+<div id="canvasContainer"></div>
+
+<button onclick="resetGrid()">Reset</button>
+<button onclick="findPath()">Find Path</button>
+<button onclick="toggleMode()">Switch Mode</button>
+
+<p id="modeLabel">Mode: BUILD</p>
+
+<select id="mode">
+  <option value="WATER">Water</option>
+  <option value="ROAD">Road</option>
+  <option value="TREE">Tree</option>
+  <option value="LAND">Land</option>
+</select>
+
+<div id="rulesBox">
+  <h3>City Intelligence Panel</h3>
+
+  <p>🚗 Active Cars: <span id="carCount">0</span></p>
+  <p>🛣️ Roads: <span id="roadCount">0</span></p>
+  <p>🌳 Trees: <span id="treeCount">0</span></p>
+  <p>🌊 Water Zones: <span id="waterCount">0</span></p>
+
+  <hr>
+  <p style="font-size:12px; opacity:0.7;">
+    System optimizing traffic flow...
+  </p>
+</div>
+<div id="costPanel">
+  <h3>⚙️ Terrain Costs</h3>
+
+  <label>🛣️ Road:</label>
+  <input type="number" id="roadCost" value="1"><br>
+
+  <label>🌿 Land:</label>
+  <input type="number" id="landCost" value="10"><br>
+
+  <label>🌊 Water:</label>
+  <input type="number" id="waterCost" value="5"><br>
+
+  <hr>
+
+  <p>📊 Total Cost: <span id="totalCost">0</span></p>
+</div>
+<script src="cell.js"></script>
+<script src="sketch.js"></script>
+
+</body>
+</html>
